@@ -1,0 +1,34 @@
+Using Mean Stack :
+
+We can get the inputs from UI - the data inputed from UI can be stored in the model using AngularJS ng-model directive.
+The model data can be sent to the service by calling the service in controller.(AngularJS)
+The service will have the API which wil send the model data to router.(AngularJS)
+The router will do the validation , checking of the correct information provided by the user etyc, and then store the data in Database.(NodeJS)
+
+API: http://localhost:8080/api/create/:name/:email/:password
+
+Model Data :
+
+LoginData{
+  email
+  password
+}
+
+CreateData{
+  name
+  email
+  Password
+}
+
+forgetResetData{
+  email
+}
+
+API:
+
+Login : $http.post('/api/login',{LoginData: LoginData}).success(function(result){
+        }
+        $http.post('/api/create',{CreateData: CreateData}).success(function(result){
+        }
+        $http.post('/api/forgetReset',{Email : forgetResetData.email}).success(function(result){
+        }
